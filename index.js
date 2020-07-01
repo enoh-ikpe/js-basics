@@ -7,11 +7,14 @@
 // //     console.log(myName+" likes "+fruits[i]);
 // //  }
 
-// //  var students =["Kenneth","IJ","Ejiro"];
+ var students =[100+20];
 
-// //  for (i=0; i<students.length; i++){
-// //      console.log("Hi "+ students[i]);
-// //  }
+ for (i=0; i<students.length; i++){
+     console.log(students[i]);
+ }
+ var t = [1+2+4];
+ console.log(t);
+ 
 
 // //  var sayHello= function(name,greeting){
 // //      console.log(name + " is saying " + greeting);
@@ -82,6 +85,9 @@
 //   //   console.log(obj);
 // });
 
+var firstOperand ="keys.value";
+var Operator;
+var secondOperand;
 var button = document.querySelectorAll(".btn-light");
 button.forEach(function (currentBtn) {
   currentBtn.addEventListener("click", function () {
@@ -89,70 +95,21 @@ button.forEach(function (currentBtn) {
     // console.log(val);
     var keys = document.getElementById("form");
     var old = keys.value;
+    // console.log(keys.value);
+  
     var val = currentBtn.getAttribute("data-val");
     keys.value = old + val;
 
-    var Addition = document.querySelector(".addition");
-    Addition.addEventListener("click", function () {
-      var keys = document.getElementById("form").value = "";
-      console.log(keys.value);
-    });
+    console.log(keys.value);
   });
 });
-var calculator = {
-  displayValue: "0",
-  firstOperand: null,
-  waitingForSecondOperand: false,
-  operator: null,
-};
-
-function handleOperator(nextOperator) {
- var { firstOperand, displayValue, operator } = calculator;
-  var inputValue = parseFloat(displayValue);
-
-  if (firstOperand === null) {
-    calculator.firstOperand = inputValue;
-  }
-
-  calculator.waitingForSecondOperand = true;
-  calculator.operator = nextOperator;
-}
-
-function handleOperator(nextOperator) {
-  const { firstOperand, displayValue, operator } = calculator;
-  const inputValue = parseFloat(displayValue);
-
-  if (firstOperand == null) {
-    calculator.firstOperand = inputValue;
-  } else if (operator) {
-    const result = performCalculation[operator](firstOperand, inputValue);
-
-    calculator.displayValue = String(result);
-    calculator.firstOperand = result;
-  }
-
-  calculator.waitingForSecondOperand = true;
-  calculator.operator = nextOperator;
-  console.log(calculator);
-}
+ function addittion (){
+   console.log(firstOperand + secondOperand);
+ }
 
 
-// current + the operator + added value, then calculate
+    var Add = document.querySelector(".addition");
+    Add.addEventListener("click", addittion)
+  
 
-// var btn1 = document.querySelector(".btn-light1");
 
-// btn1.addEventListener("click", function () {
-//   document.write(".changed").value = btn1;
-// });
-
-// function inputVal(val) {
-//   document.getElementById("form").value = val;
-// }
-
-// var buttons = document.querySelector(".btn-danger");
-// click.addEventListener('click', function(){
-//     document.querySelector("#h1")="hello javascript";
-//     console.log(h1.value)
-// })
-// document.getElementsByClassName("btn btn-primary").onclick = myFunction();
-// var myFunction =
