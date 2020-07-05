@@ -6,6 +6,11 @@ form{
     margin-top: 3rem;
     width: 400px;
 }
-.btn-light{
+.btn-light, .equates, .clears{
     padding: 10px 24px;
+    background-color: red;
+}
+#operator{
+ background-color: red;
+ padding: 10px 24px;
 }
